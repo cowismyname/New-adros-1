@@ -1,0 +1,55 @@
+body {
+  background-color: black;
+  color: white;
+  font-family: Georgia, serif;
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center; /* pushes to center */
+}
+
+.fade-text {
+  margin-top: -250px; /* pushes the ADROSOFT text downward */
+}
+
+.fade-text span {
+  display: inline-block;
+  opacity: 0;
+  animation: fadeInOut 1.5s ease-in-out forwards;
+  font-size: 8rem;
+}
+
+@font-face {
+  font-family: 'Chomsky';
+  src: url('Chomsky.woff') format('truetype');
+}
+
+.logo {
+  margin-top: -400px;
+  font-family: 'Chomsky', sans-serif;
+  font-size: 4rem;
+  color: white;
+  display: inline-block;
+  opacity: 0;
+  animation: fadeInOut 1.5s ease-in-out forwards;
+  font-size: 9rem;
+}
+
+.fade-text span:nth-child(1) { animation-delay: 0s; }
+.fade-text span:nth-child(2) { animation-delay: 0.2s; }
+.fade-text span:nth-child(3) { animation-delay: 0.4s; }
+.fade-text span:nth-child(4) { animation-delay: 0.6s; }
+.fade-text span:nth-child(5) { animation-delay: 0.8s; }
+.fade-text span:nth-child(6) { animation-delay: 1s; }
+.fade-text span:nth-child(7) { animation-delay: 1.2s; }
+.fade-text span:nth-child(8) { animation-delay: 1.4s; }
+
+@keyframes fadeInOut {
+  0% { opacity: 0; transform: translateY(10px); }
+  25% { opacity: 1; transform: translateY(0); }
+  75% { opacity: 1; transform: translateY(0); }
+  100% { opacity: 0; transform: translateY(-10px); }
+}

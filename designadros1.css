@@ -1,0 +1,75 @@
+@font-face {
+  font-family: 'Chomsky';
+  src: url('Chomsky.woff') format('truetype');
+}
+
+.thetexth1{
+  text-align: center;
+  font-family: 'Chomsky', sans-serif;
+  font-size: 4rem;
+}
+
+.thebox-fancy{
+  font-size: 30px;
+  text-align: center;
+  position: relative;  
+  background-color: #111;      /* dark background helps the glow pop */
+  padding: 20px;
+  width: 80%;
+  max-width: auto;
+  margin: 70px auto;
+  border-radius: 30px;
+  color: white;
+  box-shadow:
+    0 0 30px #0ff,      /* increase the values for higher or lower cyan */
+    0 0 10px #0ff,
+    0 0 20px #f0f,     /* medium magenta glow */
+
+  0 0 30px #f0f,
+    0 0 40px #0f0,     /* larger green glow, green glow doesnt look better adjust with other colours that suits the bg */
+    0 0 0px #0f0;
+  
+}
+
+/* Optional: animate the glow */
+@keyframes neonPulse {
+  0%, 100% {
+    box-shadow:
+      0 0 5px #0ff,
+      0 0 10px #0ff,
+      0 0 20px #f0f,
+      0 0 30px #f0f,
+      0 0 40px #0f0,
+      0 0 60px #0f0;
+  }
+  50% {
+    box-shadow:
+      0 0 10px #0ff,
+      0 0 20px #0ff,
+      0 0 30px #f0f,
+      0 0 40px #f0f,
+      0 0 50px #0f0,
+      0 0 80px #0f0;
+  }
+}
+
+
+.fancy-box {
+  animation: neonPulse 2s ease-in-out infinite;
+}
+
+
+
+body {
+  background: linear-gradient(to right, #FFFF00, #FFA500, #FF00FF);
+  background-size: 10000% 10000%;
+  animation: gradientMove 8s ease infinite;
+
+}
+
+@keyframes gradientMove {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
